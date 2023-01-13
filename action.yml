@@ -4,7 +4,7 @@ author: 'Marcus'
 inputs:
   environment: # change this
     required: false
-    description: 'Return collected data about this envrionment'
+    description: 'Return collected data about this environment'
     default: 'dev'
 runs:
   using: 'node16'
