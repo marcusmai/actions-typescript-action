@@ -1,11 +1,11 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'TypeScript Action'
+description: 'Test TypeScript Action to test input and output'
+author: 'Marcus'
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  environment: # change this
+    required: false
+    description: 'Return collected data about this envrionment'
+    default: 'dev'
 runs:
   using: 'node16'
   main: 'dist/index.js'
