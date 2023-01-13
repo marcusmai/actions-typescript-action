@@ -16,8 +16,11 @@
 //  }
 //}
 
+import * as core from '@actions/core'
+
 async function run(): Promise<void> {
-  console.log('Test')
+  const environment = core.getInput('environment')
+  console.log(`The input is: ${environment}`)
 }
 
 run()
