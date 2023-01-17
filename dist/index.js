@@ -6,23 +6,6 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 "use strict";
 
-//import * as core from '@actions/core'
-//import {wait} from './wait'
-//
-//async function run(): Promise<void> {
-//  try {
-//    const ms: string = core.getInput('milliseconds')
-//    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
-//
-//    core.debug(new Date().toTimeString())
-//    await wait(parseInt(ms, 10))
-//    core.debug(new Date().toTimeString())
-//
-//    core.setOutput('time', new Date().toTimeString())
-//  } catch (error) {
-//    if (error instanceof Error) core.setFailed(error.message)
-//  }
-//}
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -61,6 +44,8 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         const environment = core.getInput('environment');
         console.log(`The input is: ${environment}`);
+        const outputValue = 'TestingValue';
+        core.setOutput('outputResult', outputValue);
     });
 }
 run();

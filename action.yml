@@ -6,6 +6,9 @@ inputs:
     required: false
     description: 'Return collected data about this environment'
     default: 'dev'
+outputs:
+  outputResult: # The returning result
+    description: 'The result from the Action'
 runs:
   using: 'node16'
   main: 'dist/index.js'
