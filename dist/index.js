@@ -42,11 +42,17 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        const environment = core.getInput('environment');
-        console.log(`The input is: ${environment}`);
-        core.debug(`Debug-text: The input is: ${environment}`);
-        const outputValue = 'TestingValue';
-        core.setOutput('outputResult', outputValue);
+        try {
+            const environment = core.getInput('environment');
+            console.log(`The input is: ${environment}`);
+            core.debug(`Debug-text: The input is: ${environment}`);
+            const outputValue = 'TestingValue';
+            core.setOutput('outputResult', outputValue);
+        }
+        catch (error) {
+            if (error instanceof Error)
+                core.setFailed(error.message);
+        }
     });
 }
 run();
