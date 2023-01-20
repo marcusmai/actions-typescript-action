@@ -44,6 +44,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         const environment = core.getInput('environment');
         console.log(`The input is: ${environment}`);
+        core.debug(`Debug-text: The input is: ${environment}`);
         const outputValue = 'TestingValue';
         core.setOutput('outputResult', outputValue);
     });
